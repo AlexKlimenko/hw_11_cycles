@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HW_1_JS</title>
+	</head>
+	<body>
+		
+		<script>
+			console.log("ЦИКЛЫ. ЗАДАЧИ");
+
+			console.log("1. Дана строка 'I am in the easycode'. Сделать верхний регистр первым буквам.");
+
+			var str_reg = "I am in the easycode"
+			for (i = 0; i < str_reg.length; i++){
+				if (str_reg[i-1] == " " || i == 0){
+					var str_h = str_reg[i].toUpperCase();
+					document.write(str_h);
+				} else{
+					document.write(str_reg[i]);
+				}
+			}
+			
+			document.write("<br>");
+
+
+
+			console.log("2. Дана строка 'tseb eht ma i'. Сделать строку-перевертыш.");
+
+			var str = "tseb eht ma i";
+			for (var i = str.length; i--; ){
+				document.write(str[i]);
+			}
+
+				document.write("<br>");
+
+
+
+			console.log("3. Вычислить факториал 10!");
+
+			var factorial = 10;
+			var f = 1;
+			for (i = 1; i<=factorial; i++){
+				f *= i;
+			}
+			document.write(factorial + '! = ' + f);
+
+			document.write("<br>");
+
+
+
+			console.log("4. Создать сроку 'Считаем до 10ти: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10'");
+
+			var count = 'Считаем до 10ти: ';
+			for (i = 1; i <= 10; i++){
+				if (i != 10){
+					count += i + ', '
+				} else count += 10;
+			}
+			document.write(count);
+	
+			document.write("<br>");
+
+
+
+			console.log("5. На основе строки 'JavaScript is a pretty good language' сделать новую строку, где каждое слово начинается с большой буквы, а пробелы удалены");
+
+			var str = "JavaScript is a pretty good language";
+			var newStr = "";
+			for (var i = 0; i<str.length; i++){
+				if (str[i] != " "){
+					if (str[i-1] == " " || i == 0){
+						var k = str[i].toUpperCase();
+						newStr += k;
+					} else newStr += str[i];
+				} else continue;
+			}
+			document.write(newStr);
+			document.write("<br>");
+
+
+
+			console.log("6. Найти все нечетные числа от 1 до 15 включительно и вывести их в консоль");
+
+			for(var odd = 1; odd <=15; odd++){
+				if (odd%2 == 1) {
+					console.log(odd);
+				}
+			}
+			
+
+
+</script>
+</body>
